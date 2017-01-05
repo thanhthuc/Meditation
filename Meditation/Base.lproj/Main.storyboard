@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zMk-PH-xW3">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="Meditation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vvJ-B3-Bfh">
+                                <rect key="frame" x="0.0" y="64" width="414" height="631"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="timeCell" id="B6b-mj-oMh" customClass="TimeTableViewCell" customModule="Meditation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B6b-mj-oMh" id="gUu-QE-Do6">
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tz4-y5-aEF">
+                                                    <rect key="frame" x="10" y="11" width="38" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tibetan bell medium 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ise-qt-U4G">
+                                                    <rect key="frame" x="203" y="11" width="168" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tz4-y5-aEF" firstAttribute="centerY" secondItem="gUu-QE-Do6" secondAttribute="centerY" id="Vke-YQ-9g9"/>
+                                                <constraint firstItem="ise-qt-U4G" firstAttribute="centerY" secondItem="gUu-QE-Do6" secondAttribute="centerY" id="c8C-mr-lxN"/>
+                                                <constraint firstItem="Tz4-y5-aEF" firstAttribute="leading" secondItem="gUu-QE-Do6" secondAttribute="leading" constant="10" id="jyt-56-CJN"/>
+                                                <constraint firstAttribute="trailing" secondItem="ise-qt-U4G" secondAttribute="trailing" constant="10" id="qVe-TA-D0h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tibetanLabel" destination="ise-qt-U4G" id="TeQ-Fv-Waf"/>
+                                            <outlet property="timeLabel" destination="Tz4-y5-aEF" id="v5a-wo-QdH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="enableCell" id="fpX-td-YET" customClass="EnableTableViewCell" customModule="Meditation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fpX-td-YET" id="3R1-GK-SI4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cic-hO-Mpi">
+                                                    <rect key="frame" x="10" y="11" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFI-GP-wDC">
+                                                    <rect key="frame" x="355" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="enableAction:" destination="fpX-td-YET" eventType="valueChanged" id="T5I-6d-WTa"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="aFI-GP-wDC" secondAttribute="trailing" constant="10" id="C6m-gH-JjH"/>
+                                                <constraint firstItem="aFI-GP-wDC" firstAttribute="centerY" secondItem="3R1-GK-SI4" secondAttribute="centerY" id="bxT-WZ-spE"/>
+                                                <constraint firstItem="Cic-hO-Mpi" firstAttribute="centerY" secondItem="3R1-GK-SI4" secondAttribute="centerY" id="n1I-tC-tEF"/>
+                                                <constraint firstItem="Cic-hO-Mpi" firstAttribute="leading" secondItem="3R1-GK-SI4" secondAttribute="leading" constant="10" id="x6V-Xu-KIt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="enableLabel" destination="Cic-hO-Mpi" id="XuH-jw-Rm2"/>
+                                            <outlet property="enableSwitch" destination="aFI-GP-wDC" id="Qdx-D7-zp2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19196510950000001" green="0.54596153579999995" blue="0.86205389259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vvJ-B3-Bfh" secondAttribute="trailing" id="NYL-8i-yww"/>
+                            <constraint firstItem="vvJ-B3-Bfh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oh6-0J-9jf"/>
+                            <constraint firstItem="vvJ-B3-Bfh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="6/7" id="hel-eO-ZUY"/>
+                            <constraint firstItem="vvJ-B3-Bfh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="r9u-Zl-0Qv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="vvJ-B3-Bfh" id="cKD-zE-Gur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043.4782608695652" y="138.58695652173915"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="uF7-xf-HAz">
+            <objects>
+                <viewController id="KnA-2P-QlK" customClass="MainViewController" customModule="Meditation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BlI-pG-CGz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ygH-Cn-EbK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dI3-ug-HuR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-Lg-tfM">
+                                <rect key="frame" x="169.66666666666666" y="353" width="75" height="30"/>
+                                <state key="normal" title="Let's Show"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueProfileVC" id="d2B-jO-Bhd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ac-Lg-tfM" firstAttribute="centerY" secondItem="dI3-ug-HuR" secondAttribute="centerY" id="4ae-cn-hYe"/>
+                            <constraint firstItem="4ac-Lg-tfM" firstAttribute="centerX" secondItem="dI3-ug-HuR" secondAttribute="centerX" id="Iwf-QA-oue"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dih-JM-S5t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6n-gH-Z4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271.01449275362319" y="138.58695652173915"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jcq-YN-W0f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zMk-PH-xW3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IQ8-JV-Hzj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KnA-2P-QlK" kind="relationship" relationship="rootViewController" id="7oD-1Z-9pn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKI-Fg-dSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-636.23188405797111" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+</document>
