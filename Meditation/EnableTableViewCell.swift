@@ -13,6 +13,8 @@ class EnableTableViewCell: UITableViewCell {
     @IBOutlet weak var enableSwitch: UISwitch!
     @IBOutlet weak var enableLabel: UILabel!
     
+    var switchHandler: ((UISwitch) -> ())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,7 +27,7 @@ class EnableTableViewCell: UITableViewCell {
     }
     
     @IBAction func enableAction(_ sender: UISwitch) {
-        
+        switchHandler?(sender)
     }
 
 }

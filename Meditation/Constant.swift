@@ -11,4 +11,5 @@ import UIKit
 class Constant: NSObject {
     static let segueProfileViewController = "segueProfileVC"
     static let profileDefaultTableViewCell = "timeCell"
+    static let profileEnableTableViewCell = "enableCell"
 }
